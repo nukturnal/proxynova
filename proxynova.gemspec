@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["alfred@encodevlabs.com"]
   spec.summary       = %q{Public Proxy IPs List}
   spec.description   = %q{Simple library to retrieve public IPs, PORT and other details such as speed, uptime, anonymity level, last check etc. Proxinova also comes with a commandline utility}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/nukturnal/proxynova"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -20,5 +20,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "nokogiri", "~> 1.5.11"
+  spec.add_development_dependency "nokogiri", '~> 1.5'
 end
