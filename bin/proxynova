@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+lib = File.expand_path(File.dirname(__FILE__) + '/../lib')
+$LOAD_PATH.unshift(lib) if File.directory?(lib) && !$LOAD_PATH.include?(lib)
+
+require 'proxynova'
+
+def help(s = "Usage: proxynova [COUNTRY_CODE]")
+  $stderr.puts(s)
+end
+
+# Lazy check of --help param
+def process_argument(arg)
+  if arg
+    arg == '--help' ? help : get_ips(arg)
+  else
+    get_ips
+  end
+  exit(0)
+end
+
+def get_ips(country='us')
+  proxies = Proxynova.get_list(country)
+  $stderr.puts "IP ADDRESS\tPORT\tSPEED\tUPTIME\tLAST CHECK\t\tANONYMITY\tLOCATION"
+  proxies.each do |proxy|
+    $stderr.puts "#{proxy[:ip]}\t#{proxy[:port]}\t#{proxy[:speed]}\t#{proxy[:uptime]}\t#{proxy[:last_check]}\t#{proxy[:anonymity]}\t#{proxy[:country]}"
+  end
+end
+process_argument(ARGV[0])
