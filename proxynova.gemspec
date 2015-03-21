@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Alfred Rowe"]
   spec.email         = ["alfred@encodevlabs.com"]
   spec.summary       = %q{Public Proxy IPs List}
-  spec.description   = %q{Simple library to retrieve public IPs, PORT and other details such as uptime, anonymity, last check etc. Proxinova also comes with a commandline utility}
+  spec.description   = %q{Simple library to retrieve public IPs, PORT and other details such as speed, uptime, anonymity level, last check etc. Proxinova also comes with a commandline utility}
   spec.homepage      = ""
   spec.license       = "MIT"
 
