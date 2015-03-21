@@ -1,6 +1,6 @@
 # Proxynova
 
-Simple library to retrieve public IPs, PORT and other details such as speed, uptime, anonymity level, last check etc. Proxinova also comes with a commandline utility
+Simple library to retrieve public IPs, PORT and other details such as speed, uptime, anonymity level, last check etc. Proxinova also comes with a commandline utility. This library relys on the [Proxynova Website](http://www.proxynova.com/) to function properly.
 
 ## Installation
 
@@ -27,7 +27,7 @@ proxies = Proxynova.get_list
 puts proxies
 ```
 
-Result
+##### Result
 ```ruby
 {:ip=>"173.218.180.170", :port=>"8080", :last_check=>"2015-03-21 18:36:30Z", :speed=>100.0, :uptime=>"100%", :country=>"United States - Tyler", :anonymity=>"Transparent"}
 {:ip=>"167.114.144.14", :port=>"3128", :last_check=>"2015-03-21 18:36:29Z", :speed=>100.0, :uptime=>"62%", :country=>"United States - Mcallen", :anonymity=>"Elite"}
@@ -44,7 +44,7 @@ Proxynova comes with a simple commandline utlity `proxynova` for quick retrieval
 proxynova ru
 ```
 
-Result
+##### Result
 ```
 IP ADDRESS	PORT	SPEED	UPTIME	LAST CHECK		ANONYMITY	LOCATION
 80.79.241.30	8080	38.86	21%	2015-03-21 18:32:05Z	Transparent	Russia - Saint Petersburg
@@ -63,7 +63,7 @@ IP ADDRESS	PORT	SPEED	UPTIME	LAST CHECK		ANONYMITY	LOCATION
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/proxynova/fork )
+1. Fork it ( https://github.com/nukturnal/proxynova/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
